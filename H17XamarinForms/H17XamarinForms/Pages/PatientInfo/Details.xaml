@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="H17XamarinForms.Pages.PatientInfo.Details"
+             xmlns:local="clr-namespace:H17XamarinForms;assembly=H17XamarinForms" >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+
+                <Image x:Name="patientImage"   Margin="-10,-10,-10,20"/>
+
+                <Label Text="{Binding Family}"></Label>
+                <Label Text="{Binding Given}"></Label>
+                <Label Text="{Binding Prefix}"></Label>
+                <Label Text="{Binding MothersMaidenName}"></Label>
+                <Label Text="{Binding Gender}"></Label>
+                <Label Text="{Binding MaritalStatus}"></Label>
+                <Label Text="{Binding DisabilityAdjustedLifeYears}"></Label>
+                <Label Text="{Binding QualityAdjustedLifeYears}"></Label>
+                <Label Text="{Binding DeceasedDateTime}"></Label>
+
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Edit" Command="{Binding EditCommand}"></Button>
+                    <Button Grid.Column="1" Text="Cancel" Command="{Binding CancelCommand}"></Button>
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Grid.Row="0"  Text="Addresses" Command="{Binding AddressInfoCommand}" ></Button>
+                    <Button Grid.Column="1" Grid.Row="0"  Text="Birth dates" Command="{Binding BirthInfoCommand}" ></Button>
+
+                    <Button Grid.Column="0" Grid.Row="1"  Text="Documents" Command="{Binding DocumentsInfoCommand}" ></Button>
+                    <Button Grid.Column="1" Grid.Row="1"  Text="Telecom" Command="{Binding TelecomInfoCommand}" ></Button>
+
+                    <Button Grid.Column="0" Grid.Row="2"  Text="Race Information" Command="{Binding TypeInfoCommand}" ></Button>
+                </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

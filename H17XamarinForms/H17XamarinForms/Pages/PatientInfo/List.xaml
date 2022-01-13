@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="H17XamarinForms.Pages.PatientInfo.List">
+    <ContentPage.Content>
+        <StackLayout Margin="10,0">
+            <Label Text="This is our patients!"/>
+
+            <Button Command="{Binding AddNewPatientCommand}" Text="add new"></Button>
+            <ActivityIndicator x:Name="Preloader" IsRunning="true" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            <ListView x:Name="ValueList" ItemsSource="{Binding Patients}"  IsVisible="false">
+               
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

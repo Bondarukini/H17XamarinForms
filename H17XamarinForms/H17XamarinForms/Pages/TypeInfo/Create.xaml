@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="H17XamarinForms.Pages.TypeInfo.Create">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label Text="Patient document info"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Key"></Label>
+                <Entry Text="{Binding Key}"></Entry>
+
+                <Label Text="Value"></Label>
+                <Entry Text="{Binding Value}"></Entry>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Save changes" Command="{Binding SaveCahgesCommand}"></Button>
+                    <Button Grid.Column="1" Text="Cancel" Command="{Binding CancelCahgesCommand}"></Button>
+                </Grid>
+               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

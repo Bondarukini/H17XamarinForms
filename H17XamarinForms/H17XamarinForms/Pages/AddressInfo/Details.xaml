@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="H17XamarinForms.Pages.AddressInfo.Details">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label Text="Welcome to create Patient Page!"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="{Binding Line}"></Label>
+                <Label Text="{Binding City}"></Label>
+                <Label Text="{Binding State}"></Label>
+                <Label Text="{Binding Country}"></Label>
+                
+
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Edit" Command="{Binding EditCommand}"></Button>
+                    <Button Grid.Column="1" Text="Cancel" Command="{Binding CancelCommand}"></Button>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
